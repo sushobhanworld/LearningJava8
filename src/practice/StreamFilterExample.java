@@ -17,6 +17,7 @@ public class StreamFilterExample {
 
     //filter by female candidate and grade level is more than 3.9
     public static List<Student> filterStudentsByGenderAndGrade() {
+
         return StudentDataBase.getAllStudents()
                 .stream()
                 .filter(student -> student.getGender().equals("female"))
