@@ -6,7 +6,7 @@ public class SortSentence {
     public static String sortSentence(String s){
         String[] strings= s.split(" ");
         Arrays.sort(strings, (o1, o2) -> {
-            if(o1.charAt(o1.length()-1)<=o2.charAt(o2.length()-1))
+            if(o1.charAt(o1.length()-1)< o2.charAt(o2.length()-1))
                 return -1;
             else
                 return 1;

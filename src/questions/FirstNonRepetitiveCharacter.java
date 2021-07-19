@@ -1,9 +1,9 @@
 package questions;
 
 public class FirstNonRepetitiveCharacter {
-    public static char firstNonRepetitive(String s){
-        for(Character c: s.toCharArray()){
-            if(s.indexOf(c)==s.lastIndexOf(c)){
+    public static char firstNonRepetitive(String s) {
+        for (Character c : s.toCharArray()) {
+            if (s.indexOf(c) == s.lastIndexOf(c)) {
                 return c;
             }
         }
@@ -11,6 +11,6 @@ public class FirstNonRepetitiveCharacter {
     }
 
     public static void main(String[] args) {
-        System.out.println(firstNonRepetitive("abacabaabacaba"));
+        System.out.println(firstNonRepetitive("sushobhan"));
     }
 }

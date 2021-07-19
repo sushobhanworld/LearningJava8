@@ -4,6 +4,4 @@ public abstract class Bar {
     public int getNum(){
         return 38;
     }
-
-
 }

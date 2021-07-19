@@ -10,9 +10,7 @@ public class W {
         i.add(10);
         System.out.println(i);
         AAA t = new AAA() {
-            public int getNum()
-
-            {
+            public int getNum() {
                 return 22;
             }
         };
@@ -20,7 +18,6 @@ public class W {
             public int getNum() {
                 return 57;
             }
-
         };
         System.out.println(f.getNum()+" "+t.getNum());
     }

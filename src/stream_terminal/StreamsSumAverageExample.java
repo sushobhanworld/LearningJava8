@@ -9,8 +9,10 @@ public class StreamsSumAverageExample
 {
     public static int sum()
     {
-        return StudentDataBase.getAllStudents().stream()
-                .collect(Collectors.summingInt(Student::getNotebooks));
+        return StudentDataBase.getAllStudents()
+                .stream()
+                .mapToInt(Student::getNotebooks)
+                .sum();
     }
 
     public static Double average()

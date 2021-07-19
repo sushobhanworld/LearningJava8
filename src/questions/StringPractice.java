@@ -16,5 +16,9 @@ public class StringPractice {
         String s1="N";
         String s2= new String("N");
         System.out.println(s1.equals(s2));
+
+        String s4="hello";
+        s4=s4+"world";
+        System.out.println(s4);
     }
 }

@@ -8,7 +8,7 @@ public class AA {
     void start(){
         String s1="slip";
         String s2= fix(s1);
-        System.out.println(s1+" "+s2);
+        System.out.println(s1+" "+s2); //slip stream
     }
     String fix(String s1){
         s1= s1+"stream";
