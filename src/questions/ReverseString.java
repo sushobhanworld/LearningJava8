@@ -10,7 +10,17 @@ public class ReverseString {
                 .mapToObj(i -> String.valueOf(chars[i])).collect(Collectors.joining());
     }
 
+    private static String reverseStringOriginal(String text){
+        String[] s= text.split("");
+        StringBuilder stringBuilder= new StringBuilder();
+        for(int i=text.length()-1;i>=0;i--){
+            stringBuilder.append(s[i]);
+        }
+        return stringBuilder.toString();
+    }
+
     public static void main(String[] args) {
         System.out.println(reverseString("sushobhan"));
+        System.out.println(reverseStringOriginal("sushobhan"));
     }
 }
