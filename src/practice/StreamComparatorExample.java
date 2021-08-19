@@ -24,7 +24,7 @@ public class StreamComparatorExample {
                 .collect(Collectors.toList());
     }
 
-    //sort the student database according to the gpa
+    //sort reverse the student database according to the gpa
     public static List<Student> sortByGPAReverse() {
         return StudentDataBase.getAllStudents().stream()
                 //.map(Student::getName)

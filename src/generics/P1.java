@@ -41,6 +41,9 @@ public class P1 {
     public static void main(String[] args) {
         System.out.println(calculateMin(2,3));
         System.out.println(calculateMin("sushobhan","kumar"));
-        System.out.println(calculateMin(new Person("Sdam",45),new Person("Kevin",78)));
+        System.out.println(calculateMin(new Person("Sadaam",45),new Person("Kevin",78)));
+
+        Container<String,String> stringContainer= new Container<>("Kumar","Sushobhan");
+        stringContainer.printItems();
     }
 }
