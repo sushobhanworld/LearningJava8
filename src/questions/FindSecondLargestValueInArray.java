@@ -1,9 +1,6 @@
 package questions;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class FindSecondLargestValueInArray {
     public static int getSecondLargestValue(Integer[] a){
@@ -27,16 +24,24 @@ public class FindSecondLargestValueInArray {
         List<Integer> integerList= Arrays.asList(a);
         Optional<Integer> max = integerList.stream()
                 .reduce((m, n) -> m > n ? m : n);
-        Integer value = max.get();
-        return value;
+        return max.orElse(null);
     }
 
     public static Integer FindLargestValueInArrayUsingIntegerMaxJava8(Integer[] a){
         List<Integer> integerList= Arrays.asList(a);
         Optional<Integer> max = integerList.stream()
                 .reduce(Integer::max);
-        Integer value = max.get();
-        return value;
+        return max.orElse(null);
+    }
+
+    public static void FindAllStatisticsInArrayUsingIntegerMaxJava8(Integer[] a){
+        List<Integer> integerList= Arrays.asList(a);
+        IntSummaryStatistics intSummaryStatistics = integerList.stream()
+                .mapToInt((x) -> x)
+                .summaryStatistics();
+        System.out.println("Max :"+intSummaryStatistics.getMax());
+        System.out.println("Average :"+intSummaryStatistics.getAverage());
+        System.out.println("Min :"+intSummaryStatistics.getMin());
     }
 
     public static Optional<Integer> FindSecondLargestValueInArrayUsingJava8Comparator(Integer[] a){
@@ -65,5 +70,6 @@ public class FindSecondLargestValueInArray {
         System.out.println(FindSecondLargestValueInArrayUsingJava8(new Integer[]{10, 5, 12, 20}).get());
         System.out.println(FindThirdLargestValueInArrayUsingJava8(new Integer[]{10, 5, 12, 20}).get());
         System.out.println(FindSecondLargestValueInArrayUsingJava8Comparator(new Integer[]{10, 5, 12, 20}).get());
+        FindAllStatisticsInArrayUsingIntegerMaxJava8(new Integer[]{10, 5, 12, 20});
     }
 }

@@ -10,7 +10,7 @@ public class NumericStreamMapExample
     {
         return IntStream.rangeClosed(1,5)
                 .mapToObj((i)->{
-                    return new Integer(i); //in place of Integer we can use any custom object which takes integer as input
+                    return i; //in place of Integer we can use any custom object which takes integer as input
                 })
                 .collect(Collectors.toList());
     }
