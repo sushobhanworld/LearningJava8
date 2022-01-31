@@ -5,17 +5,15 @@ import java.util.*;
 public class GroupByIngredients {
     public static TreeMap<String, List<String>> groupingDishes(String[][] dishes){
         TreeMap<String, List<String>> map= new TreeMap<>();
-        for(int i=0;i< dishes.length;i++){
-            String[] arr= dishes[i];
-            for(int j=1;j< arr.length;j++){
+        for (String[] arr : dishes) {
+            for (int j = 1; j < arr.length; j++) {
                 List<String> list;
-                if(!map.containsKey(arr[j])){
-                    list= new LinkedList<>();
+                if (!map.containsKey(arr[j])) {
+                    list = new LinkedList<>();
+                } else {
+                    list = map.get(arr[j]);
                 }
-                else{
-                    list= map.get(arr[j]);
-                }
-                list.add(dishes[i][0]);
+                list.add(arr[0]);
                 map.put(arr[j], list);
             }
         }
