@@ -1,8 +1,8 @@
 package TDD;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class WordWrapTest {
     public static final int LINE_LENGTH=5;
