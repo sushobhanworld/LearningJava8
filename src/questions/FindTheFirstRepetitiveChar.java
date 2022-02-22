@@ -3,12 +3,12 @@ package questions;
 import java.util.HashSet;
 
 public class FindTheFirstRepetitiveChar {
-    public static char findFirstRepeatChar(String text){
-        char[] chars= text.toCharArray();
-        char expectedChar=0;
-        for(int i=0; i<chars.length;i++){
-            for(int j=i+1;j<chars.length;j++){
-                if(chars[i]==chars[j]){
+    public static char findFirstRepeatChar(String text) {
+        char[] chars = text.toCharArray();
+        char expectedChar = 0;
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = i + 1; j < chars.length; j++) {
+                if (chars[i] == chars[j]) {
                     return chars[i];
                 }
             }
